@@ -15,12 +15,28 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LyricParser", "LyricParser\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Impressionist", "Impressionist\Impressionist\Impressionist.csproj", "{0F920821-8006-4512-ABCD-1396D1916FED}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "解决方案项", "解决方案项", "{FD9060D1-CAC5-41F5-9C66-F2460442E00D}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FD9060D1-CAC5-41F5-9C66-F2460442E00D}"
 	ProjectSection(SolutionItems) = preProject
+		.cz-config.js = .cz-config.js
+		CHANGELOG.md = CHANGELOG.md
+		CHANGELOG_RELEASE.md = CHANGELOG_RELEASE.md
+		CODE_OF_CONDUCT.md = CODE_OF_CONDUCT.md
 		global.json = global.json
+		LICENCE = LICENCE
+		nuget.config = nuget.config
+		PREVIEW.md = PREVIEW.md
+		PrivacyPolicy.md = PrivacyPolicy.md
+		README.md = README.md
+		renovate.json = renovate.json
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HyPlayer.Frieren", "HyPlayer.Frieren\HyPlayer.Frieren.csproj", "{8DB15C94-9CCA-4B40-91F4-5919BBC67ABB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Source", "Source", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platforms", "Platforms", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -157,6 +173,16 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{DDD54862-21FE-4810-B8EC-74BF0447E000} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{2DC18999-32F2-40D4-AD9B-C5A09514E087} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{C20D7EA5-6DB8-42B3-855D-75470CBE667F} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{3622FD12-CE05-4B0F-8CE2-FAE1ADD0BB4E} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{8CB63BD0-1A5E-4CA0-AAAD-4249D37E3A47} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{0F920821-8006-4512-ABCD-1396D1916FED} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{8DB15C94-9CCA-4B40-91F4-5919BBC67ABB} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{02EA681E-C7D8-13C7-8484-4AC65E1B71E8} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {59A63E9B-DC9C-4D7D-8E1A-E67D60ABDA54}
