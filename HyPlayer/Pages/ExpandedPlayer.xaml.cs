@@ -510,6 +510,7 @@ public sealed partial class ExpandedPlayer : Page, IDisposable
         if (Common.Setting.pureLyricFocusingColor is not null)
         {
             _pureAccentBrushCache ??= Common.BrushManagement.AccentBrush;
+
         }
         if (Common.Setting.pureLyricIdleColor is not null)
         {
@@ -1373,19 +1374,19 @@ public sealed partial class ExpandedPlayer : Page, IDisposable
                         {
                             if (isBright)
                             {
-                                var AccentColor = AdjustBrightness((Windows.UI.Color)albumMainColor, -0.3f);
+                                var AccentColor = AdjustBrightness((Windows.UI.Color)albumMainColor, -0.37f);
                                 Common.BrushManagement.AccentBrush = new SolidColorBrush(AccentColor);
                                 var idleColor = AccentColor;
-                                idleColor.A = 150;
+                                idleColor.A = 175;
                                 Common.BrushManagement.IdleBrush = new SolidColorBrush(idleColor);
                                 ImmersiveTopStop.Color = Windows.UI.Color.FromArgb(0, 255, 255, 255);
                             }
                             else
                             {
-                                var AccentColor = AdjustBrightness((Windows.UI.Color)albumMainColor, 0.3f);
+                                var AccentColor = AdjustBrightness((Windows.UI.Color)albumMainColor, 0.37f);
                                 Common.BrushManagement.AccentBrush = new SolidColorBrush(AccentColor);
                                 var idleColor = AdjustBrightness((Windows.UI.Color)AccentColor, -0.15f);
-                                idleColor.A = 150;
+                                idleColor.A = 175;
                                 Common.BrushManagement.IdleBrush = new SolidColorBrush(idleColor);
                                 ImmersiveTopStop.Color = Windows.UI.Color.FromArgb(0, 0, 0, 0);
                             }
