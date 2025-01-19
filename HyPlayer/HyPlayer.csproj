@@ -121,6 +121,15 @@
     <Compile Include="Controls\ExpandableTextBox.xaml.cs">
       <DependentUpon>ExpandableTextBox.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Controls\FluentSettingControls\Common\ControlHelpers.cs" />
+    <Compile Include="Controls\FluentSettingControls\Common\ControlSizeTrigger.cs" />
+    <Compile Include="Controls\FluentSettingControls\Common\Extensions.cs" />
+    <Compile Include="Controls\FluentSettingControls\Common\IsEqualStateTrigger.cs" />
+    <Compile Include="Controls\FluentSettingControls\Common\IsNullOrEmptyStateTrigger.cs" />
+    <Compile Include="Controls\FluentSettingControls\Common\WeakEventListener.cs" />
+    <Compile Include="Controls\FluentSettingControls\SettingsCard\SettingsCard.cs" />
+    <Compile Include="Controls\FluentSettingControls\SettingsCard\SettingsCard.Properties.cs" />
+    <Compile Include="Controls\FluentSettingControls\SettingsCard\SettingsCardAutomationPeer.cs" />
     <Compile Include="Controls\GroupedSongsList.xaml.cs">
       <DependentUpon>GroupedSongsList.xaml</DependentUpon>
     </Compile>
@@ -350,6 +359,10 @@
     <Page Include="Controls\CommentsList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\FluentSettingControls\SettingsCard\SettingsCard.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Controls\LastFMLoginBox.xaml">
       <SubType>Designer</SubType>
