@@ -121,15 +121,6 @@
     <Compile Include="Controls\ExpandableTextBox.xaml.cs">
       <DependentUpon>ExpandableTextBox.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\FluentSettingControls\Common\ControlHelpers.cs" />
-    <Compile Include="Controls\FluentSettingControls\Common\ControlSizeTrigger.cs" />
-    <Compile Include="Controls\FluentSettingControls\Common\Extensions.cs" />
-    <Compile Include="Controls\FluentSettingControls\Common\IsEqualStateTrigger.cs" />
-    <Compile Include="Controls\FluentSettingControls\Common\IsNullOrEmptyStateTrigger.cs" />
-    <Compile Include="Controls\FluentSettingControls\Common\WeakEventListener.cs" />
-    <Compile Include="Controls\FluentSettingControls\SettingsCard\SettingsCard.cs" />
-    <Compile Include="Controls\FluentSettingControls\SettingsCard\SettingsCard.Properties.cs" />
-    <Compile Include="Controls\FluentSettingControls\SettingsCard\SettingsCardAutomationPeer.cs" />
     <Compile Include="Controls\GroupedSongsList.xaml.cs">
       <DependentUpon>GroupedSongsList.xaml</DependentUpon>
     </Compile>
@@ -359,10 +350,6 @@
     <Page Include="Controls\CommentsList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\FluentSettingControls\SettingsCard\SettingsCard.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
     <Page Include="Controls\LastFMLoginBox.xaml">
       <SubType>Designer</SubType>
@@ -657,6 +644,10 @@
     <ProjectReference Include="..\AudioEffectComponent\AudioEffectComponent.csproj">
       <Project>{3622fd12-ce05-4b0f-8ce2-fae1add0bb4e}</Project>
       <Name>AudioEffectComponent</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FluentSettingControls\FluentSettingControls\FluentSettingControls.csproj">
+      <Project>{6e580c40-bd82-4145-bb69-90f00627cc02}</Project>
+      <Name>FluentSettingControls</Name>
     </ProjectReference>
     <ProjectReference Include="..\HyPlayer.Frieren\HyPlayer.Frieren.csproj">
       <Project>{8db15c94-9cca-4b40-91f4-5919bbc67abb}</Project>
