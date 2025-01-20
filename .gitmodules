@@ -17,3 +17,6 @@
 [submodule "HyPlayer.Frieren"]
 	path = HyPlayer.Frieren
 	url = https://github.com/HyPlayer/HyPlayer.Frieren
+[submodule "FluentSettingControls"]
+	path = FluentSettingControls
+	url = https://github.com/HyPlayer/FluentSettingControls.git
