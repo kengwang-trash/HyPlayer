@@ -162,6 +162,7 @@
     <Compile Include="Controls\LyricControl\LyricControl.xaml.cs">
       <DependentUpon>LyricControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Locator.cs" />
     <Compile Include="LyricRenderer\Abstraction\RenderContext.cs" />
     <Compile Include="LyricRenderer\Abstraction\RenderTypography.cs" />
     <Compile Include="LyricRenderer\Abstraction\Render\LineRenderOffset.cs" />
@@ -611,6 +612,9 @@
     </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Crashes">
       <Version>5.0.6</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection">
+      <Version>9.0.1</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Gaming.XboxGameBar">
       <Version>7.2.241028002</Version>
