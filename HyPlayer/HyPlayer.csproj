@@ -109,6 +109,8 @@
     <Compile Include="Classes\UserDisplay.cs" />
     <Compile Include="Common.cs" />
     <Compile Include="Contracts\ViewModels\IViewModel.cs" />
+    <Compile Include="Contracts\Views\AppPageBase.cs" />
+    <Compile Include="Contracts\Views\DialogBase.cs" />
     <Compile Include="Controls\ArtistSelectDialog.xaml.cs">
       <DependentUpon>ArtistSelectDialog.xaml</DependentUpon>
     </Compile>
@@ -124,6 +126,9 @@
     </Compile>
     <Compile Include="Controls\GroupedSongsList.xaml.cs">
       <DependentUpon>GroupedSongsList.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Home\HomePageHeaderImage.xaml.cs">
+      <DependentUpon>HomePageHeaderImage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Controls\LastFMLoginBox.xaml.cs">
       <DependentUpon>LastFMLoginBox.xaml</DependentUpon>
@@ -286,6 +291,7 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\BackgroundImages\01.png" />
     <Content Include="Assets\BadgeLogo.scale-100.png" />
     <Content Include="Assets\BadgeLogo.scale-125.png" />
     <Content Include="Assets\BadgeLogo.scale-150.png" />
@@ -356,6 +362,10 @@
     <Page Include="Controls\CommentsList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Controls\Home\HomePageHeaderImage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Controls\LastFMLoginBox.xaml">
       <SubType>Designer</SubType>

@@ -1,10 +1,10 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using HyPlayer.ViewModels;
+using Microsoft.Extensions.DependencyInjection;
 
 using System;
 
 
-
-namespace Flarum;
+namespace HyPlayer;
 
 public class Locator
 {
@@ -27,6 +27,8 @@ public class Locator
     public Locator()
     {
         var _servicesCollection = new ServiceCollection();
+
+        _servicesCollection.AddSingleton<HomeViewModel>();
 
         _services = _servicesCollection.BuildServiceProvider();
 
