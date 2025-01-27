@@ -18,7 +18,7 @@ public class Locator
     {
         if (_services.GetService(typeof(T)) is not T service)
         {
-            throw new Exception($"{typeof(T)} needs to be regiestered in ConfigureServices.");
+            throw new Exception($"{typeof(T)} needs to be regiestered in Configured Services.");
         }
 
         return service;
