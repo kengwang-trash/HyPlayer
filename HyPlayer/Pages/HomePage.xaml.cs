@@ -1,4 +1,5 @@
-﻿using Flarum.Desktop.Views;
+﻿using AsyncAwaitBestPractices;
+using Flarum.Desktop.Views;
 using HyPlayer.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -23,6 +24,13 @@ namespace HyPlayer.Pages
         public HomePage()
         {
             InitializeComponent();
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            base.OnNavigatedTo(e);
+
+            ViewModel.GetDataAsync().SafeFireAndForget();
         }
     }
 

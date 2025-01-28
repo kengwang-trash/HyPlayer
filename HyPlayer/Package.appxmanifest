@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 
 <Package
         xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest"
@@ -34,7 +34,7 @@
                      Executable="$targetnametoken$.exe"
                      EntryPoint="HyPlayer.App">
             <uap:VisualElements
-                    DisplayName="HyPlayer"
+                    DisplayName="ms-resource:AppDisplayName"
                     Square150x150Logo="Assets\Square150x150Logo.png"
                     Square44x44Logo="Assets\Square44x44Logo.png"
                     Description="HyPlayer"
