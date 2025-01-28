@@ -29,6 +29,7 @@ namespace HyPlayer.ViewModels
 
         public HomeViewModel()
         {
+            _cancellationToken = _cancellationTokenSource.Token;
         }
 
         public async Task GetDataAsync()
