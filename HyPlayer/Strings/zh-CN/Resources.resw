@@ -147,6 +147,9 @@
   <data name="HomePage_Title.Text" xml:space="preserve">
     <value>主页</value>
   </data>
+  <data name="__LANG_NAME" xml:space="preserve">
+    <value>中文（简体）</value>
+  </data>
   <data name="HomePage_GreetingPrefix_Morning" xml:space="preserve">
     <value>早上好！</value>
   </data>
@@ -177,7 +180,43 @@
   <data name="HomePage_GreetingSuffix_DeepNight" xml:space="preserve">
     <value>愿美妙的音乐伴你进入梦乡</value>
   </data>
-  <data name="AppDisplayName" xml:space="preserve">
+  <data name="MainNav_Header_Discover.Content" xml:space="preserve">
+    <value>发现</value>
+  </data>
+  <data name="MainNav_Header_Songlist.Content" xml:space="preserve">
+    <value>歌单</value>
+  </data>
+  <data name="MainNav_Item_CreatePlaylist.Content" xml:space="preserve">
+    <value>创建歌单</value>
+  </data>
+  <data name="MainNav_Item_DailyRcmd.Content" xml:space="preserve">
+    <value>每日推荐</value>
+  </data>
+  <data name="MainNav_Item_HeartBeatMode.Content" xml:space="preserve">
+    <value>心动模式</value>
+  </data>
+  <data name="MainNav_Item_Home.Content" xml:space="preserve">
+    <value>主页</value>
+  </data>
+  <data name="MainNav_Item_MyCreatedPlaylist.Content" xml:space="preserve">
+    <value>我创建的歌单</value>
+  </data>
+  <data name="MainNav_Item_MyLibrary.Content" xml:space="preserve">
+    <value>我的收藏</value>
+  </data>
+  <data name="MainNav_Item_MyLovedPlaylist.Content" xml:space="preserve">
+    <value>我喜欢的音乐</value>
+  </data>
+  <data name="MainNav_Item_MyStoredPlaylist.Content" xml:space="preserve">
+    <value>我收藏的歌单</value>
+  </data>
+  <data name="MainNav_Item_PersonalFm.Content" xml:space="preserve">
+    <value>私人FM</value>
+  </data>
+  <data name="__APP_NAME" xml:space="preserve">
     <value>HyPlayer</value>
+  </data>
+  <data name="SettingsPage_Title.Text" xml:space="preserve">
+    <value>设置</value>
   </data>
 </root>

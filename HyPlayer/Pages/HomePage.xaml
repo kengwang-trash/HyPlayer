@@ -119,6 +119,45 @@
                         Foreground="White"
                         Text="{x:Bind ViewModel.GreetingsText, Mode=OneWay}" />
                 </StackPanel>
+                <StackPanel
+                    x:Name="ActionPanel"
+                    Margin="0,40,40,0"
+                    HorizontalAlignment="Right"
+                    VerticalAlignment="Bottom"
+                    Canvas.ZIndex="1"
+                    Orientation="Horizontal"
+                    Spacing="12">
+                    <Button
+                        Width="125"
+                        Height="60"
+                        Padding="16"
+                        CornerRadius="6">
+                        <StackPanel Orientation="Horizontal" Spacing="12">
+                            <FontIcon FontSize="22" Glyph="&#xE006;" />
+                            <TextBlock x:Uid="HomePage_Btn_MyLike" FontSize="14" />
+                        </StackPanel>
+                    </Button>
+                    <Button
+                        Width="125"
+                        Height="60"
+                        Padding="16"
+                        CornerRadius="6">
+                        <StackPanel Orientation="Horizontal" Spacing="12">
+                            <FontIcon FontSize="22" Glyph="&#xE163;" />
+                            <TextBlock x:Uid="HomePage_Btn_DailyRcmd" FontSize="14" />
+                        </StackPanel>
+                    </Button>
+                    <Button
+                        Width="125"
+                        Height="60"
+                        Padding="16"
+                        CornerRadius="6">
+                        <StackPanel Orientation="Horizontal" Spacing="12">
+                            <FontIcon FontSize="22" Glyph="&#xEFA9;" />
+                            <TextBlock x:Uid="HomePage_Btn_PersonalFm" FontSize="14" />
+                        </StackPanel>
+                    </Button>
+                </StackPanel>
             </Grid>
         </Grid>
     </ScrollViewer>

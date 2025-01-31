@@ -68,6 +68,8 @@ namespace HyPlayer.ViewModels
             IsLogined = Common.Logined;
 
             // Load rank lists
+            RankLists = new List<NCPlayList>();
+
             if (disposedValue) throw new ObjectDisposedException(nameof(Home));
             _cancellationToken.ThrowIfCancellationRequested();
             try
