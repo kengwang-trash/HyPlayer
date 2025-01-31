@@ -32,7 +32,7 @@ namespace HyPlayer.ViewModels
             _cancellationToken = _cancellationTokenSource.Token;
         }
 
-        public async Task GetDataAsync()
+        public async Task<bool> GetDataAsync()
         {
             // Get greeting text.
             DateTime currentTime = DateTime.Now;
@@ -84,12 +84,14 @@ namespace HyPlayer.ViewModels
                     RankLists.Add(ncp);
                 }
                 json.RemoveAll();
+                return true;
             }
             catch (Exception ex)
             {
                 if (ex.GetType() != typeof(TaskCanceledException) && ex.GetType() != typeof(OperationCanceledException))
                     Common.AddToTeachingTipLists(ex.Message, (ex.InnerException ?? new Exception()).Message);
             }
+            return true;
         }
     }
 }

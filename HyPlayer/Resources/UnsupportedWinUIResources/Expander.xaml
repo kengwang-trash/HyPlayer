@@ -1,0 +1,10 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:toolkit="using:CommunityToolkit.WinUI.Controls">
+
+    <Style x:Key="DefaultSettingsExpanderStyle"
+           TargetType="toolkit:SettingsExpander"/>
+    <Style x:Key="DefaultSettingsCardStyle"
+           TargetType="toolkit:SettingsCard" />
+</ResourceDictionary>
