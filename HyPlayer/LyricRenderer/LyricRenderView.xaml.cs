@@ -545,11 +545,15 @@ namespace HyPlayer.LyricRenderer
 
         private void LyricView_DoubleTapped(object sender, DoubleTappedRoutedEventArgs e)
         {
-
-            foreach (var renderOffsetsKey in Context.RenderOffsets.Keys)
+            var focusingLine = -1;
+            int firstPosition = 0;
+            int lastPosition = Context.RenderOffsets.Count - 1;
+            int maximumAttempts = (int)Math.Ceiling(Math.Log(lastPosition + 1)) + 3;
+            int attemptCount = 1;
+            while (attemptCount <= maximumAttempts)
             {
-                if (Context.LyricLines[renderOffsetsKey].Hidden)
-                    continue;
+                attemptCount += 1;
+                int renderOffsetsKey = (firstPosition + lastPosition) / 2;
                 if (Context.RenderOffsets[renderOffsetsKey].Y <= e.GetPosition(this).Y &&
                     Context.RenderOffsets[renderOffsetsKey].Y + Context.LyricLines[renderOffsetsKey].RenderingHeight >=
                     e.GetPosition(this).Y)
@@ -559,8 +563,30 @@ namespace HyPlayer.LyricRenderer
                     _jumpedLyrics = true;
                     break;
                 }
+                else if (lastPosition - firstPosition == 1)//结束时刻前面是下取整，两个都不是那就是没移到上面
+                {
+                    if (Context.RenderOffsets[renderOffsetsKey + 1].Y <= e.GetPosition(this).Y &&
+                        Context.RenderOffsets[renderOffsetsKey + 1].Y + Context.LyricLines[renderOffsetsKey + 1].RenderingHeight >=
+                        e.GetPosition(this).Y)
+                    {
+                        Context.LyricLines[renderOffsetsKey + 1].GoToReactionState(ReactionState.Press, Context);
+                        OnRequestSeek?.Invoke(Context.LyricLines[renderOffsetsKey + 1].StartTime);
+                        _jumpedLyrics = true;
+                        break;
 
+                    }
+                    break;
+                }
+                else
+                {
+                    if (Context.RenderOffsets[renderOffsetsKey].Y <= e.GetPosition(this).Y)
+                    {
+                        firstPosition = renderOffsetsKey;
+                    }
+                    else lastPosition = renderOffsetsKey;
+                }
             }
+
             Context.ScrollingDelta = 0;
             _pointerPressed = true;
 
