@@ -23,8 +23,9 @@
                         x:Key="MePageAcrylicBrush"
                         x:Name="MePageAcrylicBrush"
                         BackgroundSource="Backdrop"
-                        FallbackColor="{ThemeResource SystemRevealAltMediumHighColor}"
+                        FallbackColor="{StaticResource SystemChromeLowColor}"
                         TintColor="{ThemeResource SystemRevealAltHighColor}"
+
                         TintLuminosityOpacity="0.5"
                         TintOpacity="0.5" />
                     <DataTemplate x:Key="ListItemTemplate" x:DataType="classes:SimpleListItem">
@@ -183,16 +184,7 @@
                             Background="{ThemeResource MePageAcrylicBrush}"
                             Visibility="{x:Bind hyplayer:Common.Setting.listHeaderAcrylicBlur}" />
                     </Grid>
-
-                    <Border x:Name="RectangleImageFallback" Visibility="{x:Bind hyplayer:Common.Setting.acrylicAvailabiliity, Converter={StaticResource BoolToVisibilityInverseConverter}}">
-                        <Border.Background>
-                            <ImageBrush ImageSource="{x:Bind userDisplay.AvatarSource}" Stretch="UniformToFill" />
-                        </Border.Background>
-                    </Border>
-
-
-
-
+                    
                     <controls:DockPanel
                         x:Name="GridPersonalInformation"
                         Margin="8"
