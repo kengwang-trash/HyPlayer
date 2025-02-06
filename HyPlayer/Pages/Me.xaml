@@ -169,7 +169,7 @@
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
                 <Grid Grid.Row="0">
-                    <Grid x:Name="AcrylicGrid" Visibility="{x:Bind hyplayer:Common.Setting.acrylicAvailabiliity}">
+                    <Grid x:Name="AcrylicGrid">
                         <Border
                             x:Name="RectangleImageBack"
                             x:Load="{x:Bind hyplayer:Common.Setting.listHeaderAcrylicBlur}"
