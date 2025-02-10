@@ -41,7 +41,6 @@ using HyPlayer.NeteaseApi.ApiContracts;
 using Color = Windows.UI.Color;
 using HttpClient = Windows.Web.Http.HttpClient;
 #if !DEBUG
-using Microsoft.AppCenter.Crashes;
 #endif
 
 #endregion
@@ -125,30 +124,10 @@ namespace HyPlayer
                         return CoreApplication.MainView.Dispatcher.RunAsync(Priority,
                             () => { action(); });
                 }
-#if DEBUG
                 catch
                 {
-#else
-                catch (Exception e)
-                {
-                    Crashes.TrackError(e, null,
-                        ErrorAttachmentLog.AttachmentWithText(e.InnerException?.ToString(), "inner"));
-#endif
-
-                    /*
-                    Invoke((async () =>
-                    {
-                        await new ContentDialog
-                        {
-                            Title = "发生错误",
-                            Content = "Error: " + e.Message + "\r\n" + e.StackTrace,
-                            CloseButtonText = "关闭",
-                            DefaultButton = ContentDialogButton.Close
-                        }.ShowAsync();
-                    }));
-                    */
+                    //Ignore
                 }
-
             return null;
         }
 

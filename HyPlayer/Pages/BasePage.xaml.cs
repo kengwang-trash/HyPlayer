@@ -4,14 +4,11 @@ using HyPlayer.Classes;
 using HyPlayer.Controls;
 using HyPlayer.HyPlayControl;
 using HyPlayer.NeteaseApi.ApiContracts;
-using Microsoft.AppCenter.Crashes;
 using Microsoft.UI.Xaml.Controls;
-using Newtonsoft.Json.Linq;
 using QRCoder;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Core;
@@ -294,7 +291,6 @@ public sealed partial class BasePage : Page
             InfoBarLoginHint.IsOpen = true;
             InfoBarLoginHint.Severity = InfoBarSeverity.Error;
             InfoBarLoginHint.Message = "登录失败 " + ex;
-            Crashes.TrackError(ex);
         }
     }
 
@@ -367,9 +363,7 @@ public sealed partial class BasePage : Page
 
         HyPlayList.LoginDoneCall();
         _ = ((App)Application.Current).InitializeJumpList();
-        if (!Common.Setting.forceMemoryGarbage)
-            NavMain.SelectedItem = NavItemLogin;
-        Common.NavigatePage(typeof(Me));
+        NavMain.SelectedItem = NavItemLogin;
         return true;
     }
 

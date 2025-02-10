@@ -109,7 +109,7 @@ internal class CloudUpload
             foreach (var b in imgcomputedHash) imgsBuilder.Append(b.ToString("x2").ToLower());
             var imgmd5 = imgsBuilder.ToString();
 
-            string? coverId = null;
+            string coverId = string.Empty;
             var coverAllocRes = await Common.NeteaseAPI.RequestAsync(NeteaseApis.CloudUploadCoverTokenAllocApi,
                 new CloudUploadCoverTokenAllocRequest
                 {
@@ -154,7 +154,7 @@ internal class CloudUpload
                 Album = album,
                 Artist = artist,
                 Bitrate = bitrate,
-                CoverId = coverId!,
+                CoverId = coverId,
                 ResourceId = tokenRes.Value.Data!.ResourceId!,
                 ObjectKey = tokenRes.Value.Data!.ObjectKey!,
             };

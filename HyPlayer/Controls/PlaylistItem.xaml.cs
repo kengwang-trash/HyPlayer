@@ -19,12 +19,20 @@ namespace HyPlayer.Controls;
 
 public sealed partial class PlaylistItem : UserControl, IDisposable
 {
-    private NCPlayList playList;
-    private bool disposedValue;
+    private static DependencyProperty PlayListProperty
+        = DependencyProperty.Register(nameof(PlayList), typeof(NCPlayList), typeof(PlaylistItem), new PropertyMetadata(new NCPlayList()));
 
-    public PlaylistItem(NCPlayList playList)
+    public NCPlayList PlayList
     {
-        this.playList = playList;
+        get => (NCPlayList) GetValue(PlayListProperty);
+        set => SetValue(PlayListProperty, value);
+    }
+
+    private bool disposedValue;
+    private NCPlayList playList => PlayList;
+    
+    public PlaylistItem()
+    {
         InitializeComponent();
     }
 
@@ -116,7 +124,7 @@ public sealed partial class PlaylistItem : UserControl, IDisposable
         {
             if (disposing)
             {
-                playList = null;
+                PlayList = null;
                 ImageContainer.Source = null;
             }
 
