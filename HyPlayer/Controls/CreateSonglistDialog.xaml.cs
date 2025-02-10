@@ -1,6 +1,5 @@
 ﻿#region
 
-using NeteaseCloudMusicApi;
 using System;
 using System.Collections.Generic;
 using Windows.UI.Xaml.Controls;
@@ -18,34 +17,11 @@ public sealed partial class CreateSonglistDialog : ContentDialog
         InitializeComponent();
     }
 
-    private async void ContentDialog_PrimaryButtonClick(ContentDialog sender,
+    private void ContentDialog_PrimaryButtonClick(ContentDialog sender,
         ContentDialogButtonClickEventArgs args)
     {
-        string realIpBackup = Common.ncapi?.RealIP;
-        // This request would return with a 250 error without RealIP set
-        if (Common.ncapi != null)
-        {
-            Common.ncapi.RealIP = "118.88.88.88";
-        }
-
-        try
-        {
-            await Common.ncapi?.RequestAsync(CloudMusicApiProviders.PlaylistCreate,
-                new Dictionary<string, object>
-                    { { "name", SonglistTitle.Text }, { "privacy", (bool)PrivateCheckBox.IsChecked ? 10 : 0 } });
-        }
-        catch (Exception e)
-        {
-            Common.AddToTeachingTipLists("创建失败", e.Message);
-            return;
-        }
-
-        Common.AddToTeachingTipLists("创建成功");
-        _ = Common.PageBase.LoadSongList();
-        if (Common.ncapi != null)
-        {
-            Common.ncapi.RealIP = realIpBackup;
-        }// Restore user setting
+        // Todo: 当前创建歌单需要 CheckToken, 不再允许
+        Common.AddToTeachingTipLists("创建歌单功能已被禁用", "由于网易云音乐风控策略升级，暂不支持创建歌单");
     }
 
     private void ContentDialog_SecondaryButtonClick(ContentDialog sender, ContentDialogButtonClickEventArgs args)
