@@ -1,4 +1,5 @@
 ﻿using System;
+using HyPlayer.NeteaseApi;
 using HyPlayer.ViewModels;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -27,7 +28,10 @@ public class Locator
     {
         var _servicesCollection = new ServiceCollection();
 
-        _servicesCollection.AddTransient<HomeViewModel>();
+        _servicesCollection.AddSingleton<HomeViewModel>();
+        _servicesCollection.AddSingleton<SearchViewModel>();
+
+        _servicesCollection.AddSingleton<NeteaseCloudMusicApiHandler>();
 
         _services = _servicesCollection.BuildServiceProvider();
 
